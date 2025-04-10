@@ -17,8 +17,9 @@ const navItems = [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 md:top-0 md:bottom-auto md:border-t-0 md:border-b">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
+      {/* Navbar */}
+      <nav className="fixed z-10 bg-white border-t border-gray-200 bottom-0 left-0 right-0 md:top-0 md:bottom-auto md:border-t-0 md:border-b">
         <div className="max-w-screen-xl mx-auto px-4">
           <div className="flex justify-around md:justify-start md:space-x-8 py-3">
             {navItems.map(({ to, icon: Icon, label }) => (
@@ -27,8 +28,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 to={to}
                 className={({ isActive }) =>
                   clsx(
-                    'flex flex-col md:flex-row items-center space-y-1 md:space-y-0 md:space-x-2',
-                    'text-sm font-medium',
+                    'flex flex-col md:flex-row items-center justify-center space-y-1 md:space-y-0 md:space-x-2 text-xs md:text-sm font-medium',
                     isActive
                       ? 'text-blue-600'
                       : 'text-gray-600 hover:text-blue-600'
@@ -42,7 +42,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </nav>
-      <main className="max-w-screen-xl mx-auto px-4 py-6 md:py-8 mb-20 md:mb-0 md:mt-20">
+
+      {/* Content */}
+      <main className="flex-1 max-w-screen-xl mx-auto w-full px-4 pb-20 pt-6 md:pt-24 md:pb-6">
         {children}
       </main>
     </div>
