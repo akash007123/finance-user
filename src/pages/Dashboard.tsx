@@ -49,20 +49,20 @@ export function Dashboard() {
 
   return (
     <div className="space-y-10 px-4 md:px-8 py-6">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
         {[
           {
-            title: "Total Income",
+            title: "💰 Total Income",
             value: totalIncome,
             color: "text-green-500",
           },
           {
-            title: "Total Expenses",
+            title: "💸 Total Expenses",
             value: totalExpenses,
             color: "text-red-500",
           },
           {
-            title: "Savings",
+            title: "💎 Savings",
             value: savings,
             color: savings >= 0 ? "text-blue-500" : "text-red-500",
           },
