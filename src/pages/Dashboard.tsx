@@ -10,6 +10,8 @@ import {
   Pie,
   Cell,
 } from "recharts";
+import { Goals } from "./Goals";
+import {GoalsChart} from "./GoalsChart"
 import { useStore } from "../store/useStore";
 import { formatCurrency } from "../utils/format";
 
@@ -79,6 +81,10 @@ export function Dashboard() {
         ))}
       </div>
 
+          {/* Goal edit add and delete */}
+      {/* <Goals/> */}
+      
+
       {/* Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow p-6">
@@ -141,6 +147,7 @@ export function Dashboard() {
           </div>
         </div>
       </div>
+      <GoalsChart/>
     </div>
   );
 }

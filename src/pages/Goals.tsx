@@ -46,70 +46,80 @@ export function Goals() {
 
       {showForm && (
         <form
-          onSubmit={handleSubmit}
-          className="bg-white border rounded-2xl shadow-lg p-6 space-y-6 transition-all"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="col-span-2">
-              <label className="block text-sm font-medium text-gray-700">Goal Title</label>
-              <input
-                type="text"
-                value={newGoal.title}
-                onChange={(e) => setNewGoal({ ...newGoal, title: e.target.value })}
-                className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Target Amount</label>
-              <input
-                type="number"
-                value={newGoal.targetAmount}
-                onChange={(e) => setNewGoal({ ...newGoal, targetAmount: parseFloat(e.target.value) })}
-                className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Current Amount</label>
-              <input
-                type="number"
-                value={newGoal.currentAmount}
-                onChange={(e) => setNewGoal({ ...newGoal, currentAmount: parseFloat(e.target.value) })}
-                className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                required
-              />
-            </div>
-            <div className="col-span-2">
-              <label className="block text-sm font-medium text-gray-700">Target Date (Optional)</label>
-              <input
-                type="date"
-                value={newGoal.deadline}
-                onChange={(e) => setNewGoal({ ...newGoal, deadline: e.target.value })}
-                className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-              />
-            </div>
+        onSubmit={handleSubmit}
+        className="bg-white border rounded-2xl shadow-lg p-4 sm:p-6 space-y-6 transition-all"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          <div className="col-span-1 md:col-span-2">
+            <label className="block text-sm font-medium text-gray-700">Goal Title</label>
+            <input
+              type="text"
+              value={newGoal.title}
+              onChange={(e) => setNewGoal({ ...newGoal, title: e.target.value })}
+              className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              required
+            />
           </div>
-
-          <div className="flex justify-end space-x-3 pt-4">
-            <button
-              type="button"
-              onClick={() => {
-                setShowForm(false);
-                setEditingGoalId(null);
-              }}
-              className="px-4 py-2 rounded-full border border-gray-300 text-sm text-gray-700 hover:bg-gray-100"
-            >
-              Cancel
-            </button>
-            <button
-              type="submit"
-              className="px-5 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700"
-            >
-              {editingGoalId ? "Update Goal" : "Save Goal"}
-            </button>
+      
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Target Amount</label>
+            <input
+              type="number"
+              value={newGoal.targetAmount}
+              onChange={(e) =>
+                setNewGoal({ ...newGoal, targetAmount: parseFloat(e.target.value) })
+              }
+              className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              required
+            />
           </div>
-        </form>
+      
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Current Amount</label>
+            <input
+              type="number"
+              value={newGoal.currentAmount}
+              onChange={(e) =>
+                setNewGoal({ ...newGoal, currentAmount: parseFloat(e.target.value) })
+              }
+              className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              required
+            />
+          </div>
+      
+          <div className="col-span-1 md:col-span-2">
+            <label className="block text-sm font-medium text-gray-700">
+              Target Date (Optional)
+            </label>
+            <input
+              type="date"
+              value={newGoal.deadline}
+              onChange={(e) => setNewGoal({ ...newGoal, deadline: e.target.value })}
+              className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            />
+          </div>
+        </div>
+      
+        <div className="flex flex-col sm:flex-row justify-end items-stretch sm:items-center gap-3 pt-4">
+          <button
+            type="button"
+            onClick={() => {
+              setShowForm(false);
+              setEditingGoalId(null);
+            }}
+            className="w-full sm:w-auto px-4 py-2 rounded-full border border-gray-300 text-sm text-gray-700 hover:bg-gray-100 transition"
+          >
+            Cancel
+          </button>
+          <button
+            type="submit"
+            className="w-full sm:w-auto px-5 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition"
+          >
+            {editingGoalId ? "Update Goal" : "Save Goal"}
+          </button>
+        </div>
+      </form>
+      
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -121,7 +131,7 @@ export function Goals() {
               key={goal.id}
               className="bg-white rounded-2xl shadow-lg p-6 space-y-5 hover:shadow-xl transition"
             >
-              <div className="flex justify-between items-start">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 items-start sm:items-center">
                 <h3 className="text-xl font-semibold text-gray-900">{goal.title}</h3>
                 <div className="flex gap-3">
                   <button
