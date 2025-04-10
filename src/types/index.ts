@@ -7,6 +7,9 @@ export type TransactionCategory =
   | 'entertainment'
   | 'shopping'
   | 'transport'
+  | 'party'
+  | 'music'
+  | 'laundry'
   | 'other';
 
 export interface Transaction {

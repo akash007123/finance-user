@@ -9,21 +9,33 @@ import {
   PieChart,
   Pie,
   Cell,
-} from 'recharts';
-import { useStore } from '../store/useStore';
-import { formatCurrency } from '../utils/format';
+} from "recharts";
+import { useStore } from "../store/useStore";
+import { formatCurrency } from "../utils/format";
 
-const COLORS = ['#6366F1', '#34D399', '#FBBF24', '#F87171', '#60A5FA'];
+const COLORS = [
+  "#FF6F61",
+  "#6C5CE7",
+  "#00B894",
+  "#FDCB6E",
+  "#E17055",
+  "#0984E3",
+  "#D63031",
+  "#00CEC9",
+  "#B53471",
+  "#6AB04C",
+  "#2D3436",
+];
 
 export function Dashboard() {
   const { transactions, settings } = useStore();
 
   const totalIncome = transactions
-    .filter((t) => t.type === 'income')
+    .filter((t) => t.type === "income")
     .reduce((sum, t) => sum + t.amount, 0);
 
   const totalExpenses = transactions
-    .filter((t) => t.type === 'expense')
+    .filter((t) => t.type === "expense")
     .reduce((sum, t) => sum + t.amount, 0);
 
   const savings = totalIncome - totalExpenses;
@@ -40,19 +52,19 @@ export function Dashboard() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {[
           {
-            title: 'Total Income',
+            title: "Total Income",
             value: totalIncome,
-            color: 'text-green-500',
+            color: "text-green-500",
           },
           {
-            title: 'Total Expenses',
+            title: "Total Expenses",
             value: totalExpenses,
-            color: 'text-red-500',
+            color: "text-red-500",
           },
           {
-            title: 'Savings',
+            title: "Savings",
             value: savings,
-            color: savings >= 0 ? 'text-blue-500' : 'text-red-500',
+            color: savings >= 0 ? "text-blue-500" : "text-red-500",
           },
         ].map(({ title, value, color }) => (
           <div
@@ -80,8 +92,11 @@ export function Dashboard() {
                 <XAxis dataKey="name" stroke="#9CA3AF" />
                 <YAxis stroke="#9CA3AF" />
                 <Tooltip
-                  contentStyle={{ backgroundColor: '#f9fafb', borderRadius: '0.5rem' }}
-                  labelStyle={{ color: '#4B5563' }}
+                  contentStyle={{
+                    backgroundColor: "#f9fafb",
+                    borderRadius: "0.5rem",
+                  }}
+                  labelStyle={{ color: "#4B5563" }}
                 />
                 <Bar dataKey="value" fill="#6366F1" radius={[4, 4, 0, 0]} />
               </BarChart>
@@ -108,12 +123,18 @@ export function Dashboard() {
                   label={({ name }) => name}
                 >
                   {categoryData.map((_, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={COLORS[index % COLORS.length]}
+                    />
                   ))}
                 </Pie>
                 <Tooltip
-                  contentStyle={{ backgroundColor: '#f9fafb', borderRadius: '0.5rem' }}
-                  labelStyle={{ color: '#4B5563' }}
+                  contentStyle={{
+                    backgroundColor: "#f9fafb",
+                    borderRadius: "0.5rem",
+                  }}
+                  labelStyle={{ color: "#4B5563" }}
                 />
               </PieChart>
             </ResponsiveContainer>

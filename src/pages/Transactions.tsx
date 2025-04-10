@@ -12,6 +12,9 @@ const CATEGORIES: TransactionCategory[] = [
   'entertainment',
   'shopping',
   'transport',
+  'party',
+  'music',
+  'laundry',
   'other',
 ];
 
