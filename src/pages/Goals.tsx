@@ -4,6 +4,7 @@ import { useStore } from "../store/useStore";
 import { formatCurrency } from "../utils/format";
 import type { Goal } from "../types";
 
+
 export function Goals() {
   const { goals, addGoal, updateGoal, deleteGoal, editGoal, settings } = useStore(); 
 
@@ -15,6 +16,9 @@ export function Goals() {
     currentAmount: 0,
     deadline: undefined,
   });
+  
+  
+
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,6 +38,8 @@ export function Goals() {
       deadline: undefined,
     });
   };
+
+  
 
   return (
     <div className="space-y-6">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import { Plus, Trash2, Pen  } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import { formatCurrency, formatDate } from '../utils/format';
@@ -41,6 +41,12 @@ export function Transactions() {
     date: new Date().toISOString().split('T')[0],
     description: '',
   });
+
+// Save Data in Local Storage
+  useEffect(() => {
+    sessionStorage.setItem('transactions', JSON.stringify(transactions));
+  }, [transactions]); 
+
 
   const filteredTransactions = transactions.filter((transaction) => {
     if (filter.category !== 'all' && transaction.category !== filter.category) {

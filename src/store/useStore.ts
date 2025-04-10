@@ -73,6 +73,7 @@ export const useStore = create<State>()(
     }),
     {
       name: 'finance-store',
+      
     }
   )
 );
