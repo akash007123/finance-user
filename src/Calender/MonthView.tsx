@@ -58,7 +58,7 @@ export function MonthView() {
                 setSelectedDate(newDate);
               }}
               className={`h-20 sm:h-24 p-1 sm:p-2 rounded-lg relative cursor-pointer transition-colors
-                ${isToday(day) ? 'bg-emerald-50' : 'hover:bg-gray-50'}`}
+                ${isToday(day) ? '' : 'hover:bg-gray-50'}`}
             >
               <span
                 className={`inline-block w-6 h-6 sm:w-8 sm:h-8 text-center text-xs sm:text-sm leading-6 sm:leading-8 rounded-full

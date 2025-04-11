@@ -53,14 +53,14 @@ export function Calendar() {
       <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col lg:flex-row">
 
         {/* Sidebar */}
-        <div className="w-full lg:w-80 bg-emerald-500 text-white p-6 sm:p-8">
+        <div className="w-full lg:w-80 bg-green-400 text-white p-6 sm:p-8">
           <button className="mb-6 sm:mb-8">
             <div className="w-6 h-0.5 bg-white mb-1"></div>
             <div className="w-6 h-0.5 bg-white mb-1"></div>
             <div className="w-6 h-0.5 bg-white"></div>
           </button>
 
-          <div className="mb-6 sm:mb-8 text-center lg:text-left">
+          <div className="mb-6 sm:mb-8 text-center ">
             <div className="text-[72px] sm:text-[100px] lg:text-[120px] font-bold leading-none">
               {formatDayNumber()}
             </div>
@@ -95,21 +95,27 @@ export function Calendar() {
               )}
             </div>
 
-            <div className="space-y-3">
+            <div className="space-y-3 ]">
+              
+              <div className="flex gap-10 mt-[200px]">
+              <p className='text-xl'>Create an Event</p>
               <button
                 onClick={() => {
                   setEventToEdit(null); 
                   setShowEventForm(true);
                 }}
-                className="flex items-center gap-2 text-emerald-500 bg-white w-full px-4 py-2 sm:px-6 sm:py-3 rounded-full font-medium hover:bg-opacity-90 transition-colors justify-center"
+                className="flex items-center justify-center font-bold  text-2xl"
               >
-                <Plus className="w-5 h-5" />
-                Create an Event
+                <Plus  />
+                
               </button>
+              </div>
+
+              <hr className='mt-[50px]' />
 
               <button
                 onClick={goToToday}
-                className="flex items-center gap-2 bg-emerald-600 w-full px-4 py-2 sm:px-6 sm:py-3 rounded-full font-medium hover:bg-emerald-700 transition-colors justify-center"
+                className="flex text-green-600 hover:text-white items-center gap-2 bg-white w-full px-4 py-2 sm:px-6 sm:py-3 rounded-full font-medium hover:bg-green-800 transition-colors justify-center"
               >
                 <CalendarIcon className="w-5 h-5" />
                 Go to Today
