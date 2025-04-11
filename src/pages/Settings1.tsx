@@ -31,7 +31,7 @@ const CURRENCIES = [
   { code: "TRY", label: "Turkish Lira", symbol: "₺" },
 ];
 
-export function Settings() {
+export function Settings1() {
   const { settings, updateSettings } = useStore();
 
   useEffect(() => {
@@ -46,35 +46,18 @@ export function Settings() {
 
   return (
     <>
-      <div className="max-w-3xl mx-auto px-6 py-10">
-        <h1 className="text-3xl font-semibold text-gray-900 dark:text-white mb-8">
-          Preferences
-        </h1>
-
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 space-y-8 transition-all">
-          {/* Currency Selector */}
-          <div>
-            <label className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">
-              Preferred Currency
-            </label>
-            <select
-              value={settings.currency}
-              onChange={(e) => updateSettings({ currency: e.target.value })}
-              className="w-full mt-1 p-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              {CURRENCIES.map(({ code, label }) => (
-                <option key={code} value={code}>
-                  {label} ({code})
-                </option>
-              ))}
-            </select>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-              Choose your currency for displaying amounts.
-            </p>
-          </div>
-
-          <button></button>
-        </div>
+      <div>
+        <select
+          value={settings.currency}
+          onChange={(e) => updateSettings({ currency: e.target.value })}
+          className="w-full mt-1 p-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          {CURRENCIES.map(({ code, label }) => (
+            <option key={code} value={code}>
+              {label} ({code})
+            </option>
+          ))}
+        </select>
       </div>
     </>
   );

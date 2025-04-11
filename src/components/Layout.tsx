@@ -1,20 +1,22 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 import {
   LayoutDashboard,
   Receipt,
   Target,
   Settings as SettingsIcon,
   CalendarDays,
-} from 'lucide-react';
-import clsx from 'clsx';
+} from "lucide-react";
+import clsx from "clsx";
+
+import { Settings1 } from "../pages/Settings1";
 
 const navItems = [
-  { to: '/', icon: LayoutDashboard, label: 'Dashboard' },
-  { to: '/transactions', icon: Receipt, label: 'Transactions' },
-  { to: '/goals', icon: Target, label: 'Goals' },
-  { to: '/settings', icon: SettingsIcon, label: 'Settings' },
-  { to: '/calendar', icon: CalendarDays, label: 'Calender' },
+  { to: "/", icon: LayoutDashboard, label: "Dashboard" },
+  { to: "/transactions", icon: Receipt, label: "Transactions" },
+  { to: "/goals", icon: Target, label: "Goals" },
+  { to: "/settings", icon: SettingsIcon, label: "Settings" },
+  { to: "/calendar", icon: CalendarDays, label: "Calender" },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -30,10 +32,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 to={to}
                 className={({ isActive }) =>
                   clsx(
-                    'transition-all duration-200 flex flex-col md:flex-row items-center justify-center space-y-1 md:space-y-0 md:space-x-2 text-xs md:text-base font-medium rounded-lg px-3 py-1.5',
+                    "transition-all duration-200 flex flex-col md:flex-row items-center justify-center space-y-1 md:space-y-0 md:space-x-2 text-xs md:text-base font-medium rounded-lg px-3 py-1.5",
                     isActive
-                      ? 'text-blue-600 bg-blue-50 md:bg-transparent md:border-b-2 md:border-blue-600'
-                      : 'text-gray-600 hover:text-blue-500 hover:bg-blue-50 md:hover:bg-transparent'
+                      ? "text-blue-600 bg-blue-50 md:bg-transparent md:border-b-2 md:border-blue-600"
+                      : "text-gray-600 hover:text-blue-500 hover:bg-blue-50 md:hover:bg-transparent"
                   )
                 }
               >
@@ -41,6 +43,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <span>{label}</span>
               </NavLink>
             ))}
+            <Settings1 />
           </div>
         </div>
       </nav>
