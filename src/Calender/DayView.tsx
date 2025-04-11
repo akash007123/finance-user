@@ -1,4 +1,3 @@
-import React from 'react';
 import { useCalendar } from '../context/CalendarContext';
 
 export function DayView() {
