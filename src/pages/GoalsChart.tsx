@@ -38,7 +38,7 @@ import {
     }));
   
     return (
-      <div className="bg-white p-6 rounded-2xl shadow-lg">
+      <div className="bg-white p-6 rounded-2xl ">
         <h2 className="text-2xl font-semibold mb-4 text-gray-800">📊 Goal Progress Chart</h2>
         <ResponsiveContainer width="100%" height={300}>
           <BarChart
