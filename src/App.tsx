@@ -4,7 +4,6 @@ import { Dashboard } from './pages/Dashboard';
 import { Transactions } from './pages/Transactions';
 import { Goals } from './pages/Goals';
 import { Settings } from './pages/Settings';
-import Footer from './pages/Footer';
 import { Calendar } from './Calender';
 import { CalendarProvider } from './context/CalendarContext';
 import { Settings1 } from './pages/Settings1';
@@ -20,10 +19,10 @@ function App() {
             <Route path="/goals" element={<Goals />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/calendar" element={<Calendar />} />
-            <Route path="/Settings1" element={<Settings1 />} />
+            <Route path="/calendar" element={<Settings1 />} />
           </Routes>
         </Layout>
-        <Footer />
+      
       </Router>
     </CalendarProvider>
   );

@@ -1,12 +1,42 @@
 import React from "react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white py-4 mt-10">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-        <p className="text-sm">&copy; {new Date().getFullYear()} Finance Tracker. All rights reserved.</p>
-        <div className="flex space-x-4 mt-2 md:mt-0">
-          <a href="#" className="hover:text-yellow-400 text-sm transition"><span className="text-yellow-500">Design & Develope By </span>Akash</a>
+    <footer className="bg-gray-900 text-white py-6 mt-10">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <p className="text-sm text-center md:text-left hover:text-yellow-400">
+          <a
+            href="https://akashraikwar.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Akash Raikwar
+          </a>
+        </p>
+        <div className="flex space-x-5">
+          <a
+            href="https://github.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-yellow-400 transition"
+          >
+            <Github className="h-5 w-5" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/akash-raikwar-4a67bb171/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-yellow-400 transition"
+          >
+            <Linkedin className="h-5 w-5" />
+          </a>
+          <a
+            href="mailto:akashraikwar763@gmail.com"
+            className="hover:text-yellow-400 transition"
+          >
+            <Mail className="h-5 w-5" />
+          </a>
         </div>
       </div>
     </footer>
