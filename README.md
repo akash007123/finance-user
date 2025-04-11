@@ -5,7 +5,7 @@
 Finance Saver is a modern finance tracking web application built using ReactJS (TSX) with Redux for state management, Tailwind CSS for styling, and Recharts for dynamic visualizations. It helps users easily monitor their income, expenses, and savings using interactive charts and a sleek UI.
 
 **🚀 Live Demo**
-👉 akash-finance-saver-progrss-task.vercel.app
+👉 [akash-finance-saver-progrss-task.vercel.app](https://akash-finance-saver-progrss-task.vercel.app/)
 
 **🔥 Features**
 ✅ Add income & expenses with real-time updates
