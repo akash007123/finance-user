@@ -103,9 +103,9 @@ export function Transactions() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 mt-[30px]">
       <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-gray-900">Transactions</h1>
+        <h1 className="text-2xl font-bold text-gray-900 ">Transactions</h1>
         <button
           onClick={() => {
             setShowForm(true);

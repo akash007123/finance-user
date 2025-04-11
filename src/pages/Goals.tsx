@@ -28,7 +28,7 @@ export function Goals() {
   };
 
   return (
-    <div className="space-y-8 p-4 md:p-6">
+    <div className="space-y-8 p-4 md:p-6 mt-[20px]">
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold text-gray-800">🎯 Savings Goals</h1>
         <button
