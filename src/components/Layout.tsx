@@ -5,6 +5,7 @@ import {
   Receipt,
   Target,
   Settings as SettingsIcon,
+  CalendarDays,
 } from 'lucide-react';
 import clsx from 'clsx';
 
@@ -13,6 +14,7 @@ const navItems = [
   { to: '/transactions', icon: Receipt, label: 'Transactions' },
   { to: '/goals', icon: Target, label: 'Goals' },
   { to: '/settings', icon: SettingsIcon, label: 'Settings' },
+  { to: '/calendar', icon: CalendarDays, label: 'Calender' },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {

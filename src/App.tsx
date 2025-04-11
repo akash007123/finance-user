@@ -5,21 +5,25 @@ import { Transactions } from './pages/Transactions';
 import { Goals } from './pages/Goals';
 import { Settings } from './pages/Settings';
 import Footer from './pages/Footer';
-
+import { Calendar } from './Calender';
+import { CalendarProvider } from './context/CalendarContext';
 
 function App() {
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/transactions" element={<Transactions />} />
-          <Route path="/goals" element={<Goals />} />
-          <Route path="/settings" element={<Settings />} />
-        </Routes>
-      </Layout>
-      <Footer/>
-    </Router>
+    <CalendarProvider>
+      <Router>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/transactions" element={<Transactions />} />
+            <Route path="/goals" element={<Goals />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/calendar" element={<Calendar />} />
+          </Routes>
+        </Layout>
+        <Footer />
+      </Router>
+    </CalendarProvider>
   );
 }
 

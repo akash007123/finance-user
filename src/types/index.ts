@@ -46,3 +46,24 @@ export interface State {
   deleteGoal: (id: string) => void;
   updateSettings: (settings: Partial<Settings>) => void;
 }
+
+export interface CalendarEvent {
+  id: string;
+  title: string;
+  description?: string;
+  date: string; 
+  time?: string;
+}
+
+export type ViewMode = 'year' | 'month' | 'day';
+
+export interface CalendarContextType {
+  events: CalendarEvent[];
+  addEvent: (event: Omit<CalendarEvent, 'id'>) => void;
+  deleteEvent: (id: string) => void;
+  selectedDate: Date;
+  updateEvent: (event: CalendarEvent) => void; 
+  setSelectedDate: (date: Date) => void;
+  viewMode: ViewMode;
+  setViewMode: (mode: ViewMode) => void;
+}
