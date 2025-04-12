@@ -218,7 +218,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen flex bg-gradient-to-br from-gray-100 via-white to-gray-200">
       <div className="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0 bg-white shadow-lg z-30">
         <div className="flex items-center justify-center h-16 border-b">
-          <h1 className="text-xl font-bold text-blue-600"><img src="https://media-hosting.imagekit.io/e6930ba272704ac4/Screenshot_2025-04-11_225758-removebg-preview.png?Expires=1839000545&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=khZe1ted-7GKvZPxu1iq833jr1TtePsVChdhjAjXaI-7GS6PSgcAt2YuBJmnL4eETD5bB08wKg2d64QSxkpWOL~K8xdWxhbHafpwcKfJrmXgW3g7nk3sU13qdFhx5PS4BwRG83dyI~3IZOm5cYnOtveQddTn3L~MLpGAausBYfyokLoOArUqg7ECBhYMY57aRkMI4UfGRSRPMoXmfkLpw0njcsikdn0TAjQzzGGcvenEQAz07zDpm5rP0QT5antgFnqGMWxIY9ZExhjY~B-cWzDcKWbWsoEmaY9ooEFmVH2W5sg3FTGMlyCOpmiN97McQoH~nXvb4w~769luS4J6vQ__" alt="logo" /></h1>
+          <h1 className="text-xl font-bold text-blue-600"><img src="https://media-hosting.imagekit.io/e6930ba272704ac4/Screenshot_2025-04-11_225758-removebg-preview.png?Expires=1839000545&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=khZe1ted-7GKvZPxu1iq833jr1TtePsVChdhjAjXaI-7GS6PSgcAt2YuBJmnL4eETD5bB08wKg2d64QSxkpWOL~K8xdWxhbHafpwcKfJrmXgW3g7nk3sU13qdFhx5PS4BwRG83dyI~3IZOm5cYnOtveQddTn3L~MLpGAausBYfyokLoOArUqg7ECBhYMY57aRkMI4UfGRSRPMoXmfkLpw0njcsikdn0TAjQzzGGcvenEQAz07zDpm5rP0QT5antgFnqGMWxIY9ZExhjY~B-cWzDcKWbWsoEmaY9ooEFmVH2W5sg3FTGMlyCOpmiN97McQoH~nXvb4w~769luS4J6vQ__" alt="logo" className="w-full h-full" /></h1>
         </div>
         <div className="flex flex-col p-4 space-y-3 flex-grow">
           {navItems.map(({ to, icon: Icon, label }) => (
@@ -254,7 +254,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         )}
       >
         <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="text-lg font-semibold"><img src="https://media-hosting.imagekit.io/e6930ba272704ac4/Screenshot_2025-04-11_225758-removebg-preview.png?Expires=1839000545&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=khZe1ted-7GKvZPxu1iq833jr1TtePsVChdhjAjXaI-7GS6PSgcAt2YuBJmnL4eETD5bB08wKg2d64QSxkpWOL~K8xdWxhbHafpwcKfJrmXgW3g7nk3sU13qdFhx5PS4BwRG83dyI~3IZOm5cYnOtveQddTn3L~MLpGAausBYfyokLoOArUqg7ECBhYMY57aRkMI4UfGRSRPMoXmfkLpw0njcsikdn0TAjQzzGGcvenEQAz07zDpm5rP0QT5antgFnqGMWxIY9ZExhjY~B-cWzDcKWbWsoEmaY9ooEFmVH2W5sg3FTGMlyCOpmiN97McQoH~nXvb4w~769luS4J6vQ__" alt="logo" /></h2>
+          <h2 className="text-lg font-semibold"><img src="https://media-hosting.imagekit.io/e6930ba272704ac4/Screenshot_2025-04-11_225758-removebg-preview.png?Expires=1839000545&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=khZe1ted-7GKvZPxu1iq833jr1TtePsVChdhjAjXaI-7GS6PSgcAt2YuBJmnL4eETD5bB08wKg2d64QSxkpWOL~K8xdWxhbHafpwcKfJrmXgW3g7nk3sU13qdFhx5PS4BwRG83dyI~3IZOm5cYnOtveQddTn3L~MLpGAausBYfyokLoOArUqg7ECBhYMY57aRkMI4UfGRSRPMoXmfkLpw0njcsikdn0TAjQzzGGcvenEQAz07zDpm5rP0QT5antgFnqGMWxIY9ZExhjY~B-cWzDcKWbWsoEmaY9ooEFmVH2W5sg3FTGMlyCOpmiN97McQoH~nXvb4w~769luS4J6vQ__" alt="logo" className="w-full h-full" /></h2>
           <button onClick={() => setMenuOpen(false)}>
             <X className="w-6 h-6" />
           </button>
@@ -287,7 +287,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           className="fixed z-50 top-4 left-4 bg-white p-2 rounded-md shadow-md sm:block md:hidden"
           onClick={() => setMenuOpen(true)}
         >
-          <Menu className="w-6 h-6 text-gray-700" />
+          <Menu className="w-4 h-4 text-gray-700" />
         </button>
       )}
 
